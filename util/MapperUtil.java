@@ -28,7 +28,7 @@ public class MapperUtil {
 
 	public static Owner convertOwnerDtoToEntity(OwnerDTO ownerDTO) {
 		Owner owner = new Owner();
-		owner.setId(ownerDTO.getId());
+		//owner.setId(ownerDTO.getId());
 		owner.setFirstName(ownerDTO.getFirstName());
 		owner.setLastName(ownerDTO.getLastName());
 		owner.setGender(ownerDTO.getGender());
