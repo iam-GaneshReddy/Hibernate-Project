@@ -34,8 +34,8 @@ public class InputUtil {
 	}
 
 	public static OwnerDTO acceptOwnerDetailsToSave(Scanner scanner) {
-		System.out.println("Enter id of owner:");
-		int id = scanner.nextInt();
+		//System.out.println("Enter id of owner:");
+		//int petId = scanner.nextInt();
 		System.out.println("Enter first name of owner:");
 		String firstName = scanner.next();
 		System.out.println("Enter last name of owner:");
@@ -62,7 +62,7 @@ public class InputUtil {
 		String petType = scanner.next().toUpperCase();
 		try {
 			OwnerDTO ownerDTO = new OwnerDTO();
-			ownerDTO.setId(id);
+			//ownerDTO.setId(id);
 			ownerDTO.setFirstName(firstName);
 			ownerDTO.setLastName(lastName);
 			ownerDTO.setGender(Gender.valueOf(gender));
