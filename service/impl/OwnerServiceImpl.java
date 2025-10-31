@@ -49,7 +49,7 @@ public class OwnerServiceImpl implements OwnerService{
 		Owner existingOwner = ownerRepository.findOwner(ownerId);
 		if (Objects.isNull(existingOwner)) {
 			throw new OwnerNotFoundException(
-					String.format(PropertiesConfig.getProperty(OWNER_NOT_FOUND), ownerId));
+					String.format(PROPERTIES_CONFIG.getProperty(OWNER_NOT_FOUND), ownerId));
 		}
 		ownerRepository.updatePetDetails(ownerId, petName);
 		
@@ -60,7 +60,7 @@ public class OwnerServiceImpl implements OwnerService{
 		Owner existingOwner = ownerRepository.findOwner(ownerId);
 		if (Objects.isNull(existingOwner)) {
 			throw new OwnerNotFoundException(
-					String.format(PropertiesConfig.getProperty(OWNER_NOT_FOUND), ownerId));
+					String.format(PROPERTIES_CONFIG.getProperty(OWNER_NOT_FOUND), ownerId));
 		}
 		ownerRepository.deleteOwner(ownerId);
 		
