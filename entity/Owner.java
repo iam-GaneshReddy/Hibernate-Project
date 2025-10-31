@@ -3,6 +3,8 @@ package com.scaleupindia.entity;
 
 import java.time.LocalDate;
 
+import org.hibernate.annotations.Generated;
+
 import com.scaleupindia.enums.Gender;
 import com.scaleupindia.enums.PetType;
 
@@ -10,12 +12,17 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "owner_table")
 public class Owner {
+	//GeneratedValue-auto
+	//GeneratedValue(strategy = GenerationType.UUID)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private int id;
 	@Column(name = "first_name", nullable = false)
@@ -50,9 +57,9 @@ public class Owner {
 		return id;
 	}
 
-	public void setId(int id) {
+	/*public void setId(int id) {
 		this.id = id;
-	}
+	}*/
 
 	public String getFirstName() {
 		return firstName;
